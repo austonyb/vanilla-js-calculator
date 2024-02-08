@@ -155,3 +155,13 @@ const calculateResult = () => {
 };
 
 equals.addEventListener("click", calculateResult);
+
+
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.body.classList.add('pulse');
+        setTimeout(() => {
+            document.body.classList.remove('pulse');
+        }, 200); // Change background back after 200ms
+    });
+});

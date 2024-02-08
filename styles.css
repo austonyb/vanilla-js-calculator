@@ -45,8 +45,12 @@ body {
   height: 100vh;
   margin: 0;
   background-size: 200% 100%;
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple, red);
+  background-image: linear-gradient(to right, #ff00ff, #00ff00, #ffff00, #00ffff, #ff00ff);
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  animation: vaporwave-gradient 10s ease infinite;
   animation: gradient 5s ease infinite;
+  transition: background-color 0.3s ease;
 }
 
 @keyframes gradient {
@@ -59,4 +63,8 @@ body {
   0% {
     background-position: 0% 50%;
 }
+}
+
+body.pulse {
+  background-color: white;
 }
